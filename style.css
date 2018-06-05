@@ -1,10 +1,34 @@
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
 #month-changer{
     padding-top: 20px;
 }
+
+#header-row{
+    border: none;
+}
+
+th{
+    text-align: right;
+}
+
 td{
     width: 14.2%;
+    text-align: right;
+    border: 1px solid rgb(228, 226, 226);
 }
 
 .week-row{
-    height: 100px;
+    height: 110px;
+}
+
+.weekend-header{
+    color: #DCDCDC;
+}
+
+.weekend{
+    background-color:#F5F5F5;
+    color: grey;
 }
