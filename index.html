@@ -96,8 +96,6 @@
         </div>
         <!--New Event Modal-->
         <div class="container">
-                <!-- Trigger the modal with a button -->
-                <!-- <button type="button" class="btn btn-default btn-lg" id="myBtn">Add New Event</button> -->
               
                 <!-- Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
@@ -120,9 +118,6 @@
                                 <!--Event Date Input-->
                                 <label for="date">Event Date</label>
                                 <input type="date" name="date" id="date" placeholder="Date"><br>
-                                <!--All Day Option-->
-                                <label for "allday">All day?</label>
-                                <input type="checkbox" id="alldaycheck" name="allday" value="allday"><br>
                                 <!--Event Start Time Input-->
                                 <label for="start">Start Time</label>
                                 <select name="start" id="starttime">
@@ -187,11 +182,10 @@
                                     <option value="am">AM</option>
                                     <option value="pm">PM</option>
                                 </select>
+                                <div class="modal-footer">
+                                    <input type="submit" id="submitbutton" onClick=addNewEvent() class="btn btn-default btn-default" data-dismiss="modal">
+                                </div>
                             </form>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="submit" id="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal">Submit</button>
-                        <button type="submit" id="close" class="btn btn-default btn-default pull-left" data-dismiss="modal">Cancel</button>
                       </div>
                     </div>
                   </div>
