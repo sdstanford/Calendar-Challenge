@@ -1,4 +1,4 @@
-var events = [];
+var events = [{title: "Running Club", location: "blah", date: "2018-06-06", start: "9", end: "10"}];
 
 // New Event Object Constructor
 function Event(title, location, date, start, end) {
@@ -11,6 +11,7 @@ function Event(title, location, date, start, end) {
 
 //Initiate modal pop up when calendar cell is double clicked
 $(document).ready(function(){
+    displayEvents();
     $("td").dblclick(function(){
         $("#myModal").modal();
     });
@@ -31,4 +32,25 @@ var addNewEvent = function() {
     events.push(newEvent);
 
     console.log(events);
+
+    displayEvents();
 };
+
+var displayEvents = function() {
+    $("#9").clear;
+    events.forEach(function(event){
+        //Split event date at dash to identify day
+        var datesplit = event.date.split("-");
+        var day = datesplit[2];
+        //Create div for event
+        var eventDiv = $("<div>");
+        eventDiv.addClass("single-event")
+        //Creat p and append with text of event name
+        var eventName = $("<p>");
+        eventName.text(event.title);
+        //Append p to event div
+        eventDiv.append(eventName);
+        //Append both to appropriate calendar field
+        $("#" + day).append(eventDiv);
+    })
+}
