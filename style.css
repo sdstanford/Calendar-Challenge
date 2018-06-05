@@ -45,5 +45,35 @@ td{
     background-color: #FCD9F9;
     text-align: left;
     color: black;
+}
 
+.single-event:hover{
+    background-color: rgb(248, 155, 240);
+}
+
+.single-event:active{
+    background-color: rgb(248, 155, 240);
+}
+
+.event-link{
+    color: black;
+}
+
+.event-link:link{
+    color: black;
+}
+
+.event-link:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.event-link:active{
+    color: black;
+    text-decoration: none;
+}
+
+.event-link:hover{
+    color: black;
+    text-decoration: none;
 }

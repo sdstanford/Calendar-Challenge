@@ -1,5 +1,13 @@
 var events = [{title: "Running Club", location: "blah", date: "2018-06-06", start: "9", end: "10"}];
 
+//Identify today's date with red circle
+// var today = new Date();
+// console.log(today);
+// todaydate = today.split(" ");
+// activedate = todaydate[2];
+// $("#" + activedate).attr("style", "color:red");
+
+
 // New Event Object Constructor
 function Event(title, location, date, start, end) {
     this.title = title,
@@ -43,13 +51,19 @@ var displayEvents = function() {
         var day = datesplit[2];
         //Create div for event
         var eventDiv = $("<div>");
-        eventDiv.addClass("single-event")
-        //Creat p and append with text of event name
-        var eventName = $("<p>");
+        eventDiv.addClass("single-event");
+        //Create link and append with text of event name
+        var eventName = $("<a>");
         eventName.text(event.title);
-        //Append p to event div
+        eventName.addClass("event-link");
+        //Append link to event div
         eventDiv.append(eventName);
         //Append both to appropriate calendar field
         $("#" + day).html(eventDiv);
     })
 }
+
+$(".event-link").on("click", function(){
+    alert(event.title, event.location, event.start, event.end);
+})
+
