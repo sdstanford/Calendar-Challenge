@@ -1,12 +1,12 @@
 var events = [];
 
 // Identify today's date with red circle
-var identifyToday = function() {
-    var newDate = new Date + "";
-    var todaydate = newDate.split(" ");
-    var activedate = todaydate[2];
-    $("#v" + activedate).addClass("todaydate");
-};
+// var identifyToday = function() {
+//     var newDate = new Date + "";
+//     var todaydate = newDate.split(" ");
+//     var activedate = todaydate[2];
+//     $("#" + activedate).addClass("todaydate");
+// };
 
 // New Event Object Constructor
 function Event(title, location, date, start, end, id) {
@@ -20,7 +20,7 @@ function Event(title, location, date, start, end, id) {
 
 //Initiate modal pop up when calendar cell is double clicked
 $(document).ready(function(){
-    identifyToday();
+    // identifyToday();
     displayEvents();
     $("td").dblclick(function(){
         $("#myModal").modal();
@@ -48,6 +48,7 @@ var addNewEvent = function() {
 };
 
 var displayEvents = function() {
+
     events.forEach(function(event){
         //Split event date at dash to identify day
         var datesplit = event.date.split("-");

@@ -38,7 +38,26 @@ td{
 
 .weekend{
     background-color:#F5F5F5;
-    color: grey;
+    color: rgb(165, 164, 164);
+}
+
+.lastmonth{
+    color: rgb(165, 164, 164);
+}
+
+.todaydate{
+    display: block;
+    float: right;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+
+    -moz-border-radius: 15px; /* or 50% */
+    border-radius: 15px; /* or 50% */
+
+    background-color: red;
+    color: white;
+    text-align: center;
 }
 
 .single-event{
