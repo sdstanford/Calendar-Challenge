@@ -37,7 +37,6 @@ var addNewEvent = function() {
 };
 
 var displayEvents = function() {
-    $("#9").clear;
     events.forEach(function(event){
         //Split event date at dash to identify day
         var datesplit = event.date.split("-");
@@ -51,6 +50,6 @@ var displayEvents = function() {
         //Append p to event div
         eventDiv.append(eventName);
         //Append both to appropriate calendar field
-        $("#" + day).append(eventDiv);
+        $("#" + day).html(eventDiv);
     })
 }
