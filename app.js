@@ -10,13 +10,7 @@ function Event(title, location, date, start, end) {
 };
 
 $(document).ready(function(){
-    $("#myBtn").click(function(){
+    $("td").dblclick(function(){
         $("#myModal").modal();
     });
 });
-
-// var eventPopup = function () {
-
-// }
-
-// $(td).on("dblclick", eventPopup());
