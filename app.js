@@ -75,18 +75,20 @@ var displayEvents = function() {
     })
 }
 
-$('#eventModal').on('show.bs.modal', function (event) {
-    var a = $(event.relatedTarget) // Button that triggered the modal
-    var title = a.data('title') // Extract info from data-* attributes
-    var location = a.data('location')
-    var date = a.data('date')
-    var time = a.data('time')
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('#event-title').append(title)
-    modal.find('#event-location').append(location)
-    modal.find('#event-date').append(date)
-    modal.find('#event-time').append(time)
-  });
+$(document).ready(function () {
+    $('#eventModal').on('show.bs.modal', function (event) {
+        var a = $(event.relatedTarget) // Button that triggered the modal
+        var title = a.data('title') // Extract info from data-* attributes
+        var location = a.data('location')
+        var date = a.data('date')
+        var time = a.data('time')
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find('#event-title').text(title)
+        modal.find('#event-location').text(location)
+        modal.find('#event-date').text(date)
+        modal.find('#event-time').text(time)
+    })
+});
 
